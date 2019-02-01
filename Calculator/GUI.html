@@ -24,7 +24,8 @@ align: right;
 <center>
 <table id="numpad" align="center" width="275px">
 <tr>
-<td><button onclick="onoff()">ON/OFF</button></td>
+<td><button onclick="on()">ON</button></td>
+<td><button onclick="off()">OFF</button></td>
 <td colspan="2"><button>Clear</button></td>
 <td><button>÷</button></td>
 </tr>
@@ -88,8 +89,11 @@ document.getElementById("screen").innerHTML=document.getElementById("screen").in
 function zero() {
 document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'0'
 }
-function onoff() {
-document.getElementById("window").style.backgroundColor="grey";
+function on() {
+document.getElementById("window").style.backgroundColor="grey"
+}
+function off() {
+document.getElementById("window").style.backgroundColor="black"
 }
 </script>
 
