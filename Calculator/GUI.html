@@ -1,37 +1,97 @@
 <html>
 <head>
 <style>
-
+p {
+color: white;
+padding: 30px;
+align: right;
+}
 </style>
 </head>
 <body>
 <div style="width:300px;height:500px;background-color:lightgrey;padding:25px">
-<center><div style="background-color:black;width:300px;height:75px">
 
-</div></center>
+<center>
+<div id="window" style="background-color:black;width:300px;height:75px;padding:0px">
+<center>
+<p id="screen">5</p>
+</center>
+</div>
+</center>
 
-<table id="numpad" align="center">
+<br>
+
+<center>
+<table id="numpad" align="center" width="275px">
 <tr>
-<td>7</td>
-<td>4</td>
-<td>1</td>
+<td><button onclick="onoff()">ON/OFF</button></td>
+<td colspan="2"><button>Clear</button></td>
+<td><button>÷</button></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td><button onclick="seven()">7</button></td>
+<td><button onclick="eight()">8</button></td>
+<td><button onclick="nine()">9</button></td>
+<td><button>x</button></td>
+</tr>
+<tr>
+<td><button onclick="four()">4</button></td>
+<td><button onclick="five()">5</button></td>
+<td><button onclick="six()">6</button></td>
+<td><button>-</button></td>
+</tr>
+<tr>
+<td><button onclick="one()">1</button></td>
+<td><button onclick="two()">2</button></td>
+<td><button onclick="three()">3</button></td>
+<td><button>+</button></td>
+</tr>
+<tr>
+<td><button></button></td>
+<td><button onclick="zero()">0</button></td>
+<td><button></button></td>
+<td><button>=</button></td>
 </tr>
 </table>
-
-<table id="funct" align="right">
-<tr><td>÷</td></tr>
-<tr><td>x</td></tr>
-<tr><td>-</td></tr>
-<tr><td>+</td></tr>
-<tr><td>=</td></tr>
-</table>
+</center>
 
 </div>
+
+<script>
+function one() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'1'
+}
+function two() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'2'
+}
+function three() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'3'
+}
+function four() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'4'
+}
+function five() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'5'
+}
+function six() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'6'
+}
+function seven() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'7'
+}
+function eight() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'8'
+}
+function nine() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'9'
+}
+function zero() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'0'
+}
+function onoff() {
+document.getElementById("window").style.backgroundColor="grey";
+}
+</script>
 
 </body>
 
