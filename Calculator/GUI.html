@@ -12,9 +12,9 @@ align: right;
 <div style="width:300px;height:500px;background-color:lightgrey;padding:25px">
 
 <center>
-<div id="window" style="background-color:black;width:300px;height:75px;padding:0px">
+<div id="window" style="background-color:grey;width:300px;height:75px;padding:0px">
 <center>
-<p id="screen">5</p>
+<p id="screen"></p>
 </center>
 </div>
 </center>
@@ -26,14 +26,14 @@ align: right;
 <tr>
 <td><button onclick="on()">ON</button></td>
 <td><button onclick="off()">OFF</button></td>
-<td colspan="2"><button>Clear</button></td>
+<td colspan="2"><button onclick="clearscreen()">Clear</button></td>
 <td><button>÷</button></td>
 </tr>
 <tr>
 <td><button onclick="seven()">7</button></td>
 <td><button onclick="eight()">8</button></td>
 <td><button onclick="nine()">9</button></td>
-<td><button>x</button></td>
+<td><button onclick="x1()">x</button></td>
 </tr>
 <tr>
 <td><button onclick="four()">4</button></td>
@@ -51,7 +51,7 @@ align: right;
 <td><button></button></td>
 <td><button onclick="zero()">0</button></td>
 <td><button></button></td>
-<td><button>=</button></td>
+<td><button onclick="equals()">=</button></td>
 </tr>
 </table>
 </center>
@@ -59,6 +59,9 @@ align: right;
 </div>
 
 <script>
+var a = 0 ;
+var b = 0;
+
 function one() {
 document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'1'
 }
@@ -90,10 +93,23 @@ function zero() {
 document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'0'
 }
 function on() {
-document.getElementById("window").style.backgroundColor="grey"
+document.getElementById("window").style.backgroundColor="black"
 }
 function off() {
-document.getElementById("window").style.backgroundColor="black"
+document.getElementById("window").style.backgroundColor="grey"
+}
+function clearscreen() { 
+document.getElementById("screen").innerHTML="";
+}
+function x1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " x ";
+}
+function equals() {
+b=document.getElementById("screen").innerHTML;
+}
+function multiply(a,b) {
+  return a * b;
 }
 </script>
 
