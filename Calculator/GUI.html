@@ -27,7 +27,7 @@ align: right;
 <td><button onclick="on()">ON</button></td>
 <td><button onclick="off()">OFF</button></td>
 <td colspan="2"><button onclick="clearscreen()">Clear</button></td>
-<td><button>÷</button></td>
+<td><button onlick="d1()">÷</button></td>
 </tr>
 <tr>
 <td><button onclick="seven()">7</button></td>
@@ -63,34 +63,34 @@ var a = 0 ;
 var b = 0;
 
 function one() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'1'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+1
 }
 function two() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'2'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+2
 }
 function three() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'3'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+3
 }
 function four() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'4'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+4
 }
 function five() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'5'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+5
 }
 function six() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'6'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+6
 }
 function seven() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'7'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+7
 }
 function eight() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'8'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+8
 }
 function nine() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'9'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+9
 }
 function zero() {
-document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'0'
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+0
 }
 function on() {
 document.getElementById("window").style.backgroundColor="black"
@@ -105,11 +105,35 @@ function x1() {
 a=document.getElementById("screen").innerHTML;
 document.getElementById("screen").innerHTML= a + " x ";
 }
+function d1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " / ";
+}
 function equals() {
 b=document.getElementById("screen").innerHTML;
-}
+if (document.getElementById("screen").innerHTML.includes("x")){
+document.getElementById("screen").innerHTML= multiply(a,b);
+}}
+//if "/" in getElementById("screen").innerHTML{
+//getElementById("screen").innerHTML= divide(a,b)
+//}
+//if "-" in getElementById("screen").innerHTML{
+//getElementById("screen").innerHTML= subtract(a,b)
+//}
+//if "+" in getElementById("screen").innerHTML{
+//getElementById("screen").innerHTML= add(a,b)
+//}
 function multiply(a,b) {
   return a * b;
+}
+function divide(a,b) {
+return a / b;
+}
+function subtract(a,b) {
+return a - b;
+}
+function add(a,b) {
+return a + b;
 }
 </script>
 
