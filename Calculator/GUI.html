@@ -2,17 +2,44 @@
 <head>
 <style>
 p {
-color: white;
+color: #aaffe4;
 padding: 30px;
 align: right;
+}
+button {
+padding: 15px;
+background-color: #aaffe4;
+border-radius:4px;
+color: black;
+border: 2px solid black;
+text-align:center;
+margin: 4px 1px;
+display: inline-block;
+}
+td {
+text-align:center;
+}
+.nonop {
+background-color: #98e2cb;
+}
+.op {
+background-color: #82ffd8;
+}
+.body {
+border-radius: 4px;
+border: 2px solid black;
+}
+.screen {
+border-radius: 4px;
+border: 2px solid black;
 }
 </style>
 </head>
 <body>
-<div style="width:300px;height:500px;background-color:lightgrey;padding:25px">
+<div class="body" style="width:300px;height:420px;background-color:lightgrey;padding:25px">
 
 <center>
-<div id="window" style="background-color:grey;width:300px;height:75px;padding:0px">
+<div class='screen' id="window" style="background-color:grey;width:300px;height:75px;padding:0px">
 <center>
 <p id="screen"></p>
 </center>
@@ -24,34 +51,34 @@ align: right;
 <center>
 <table id="numpad" align="center" width="275px">
 <tr>
-<td><button onclick="on()">ON</button></td>
-<td><button onclick="off()">OFF</button></td>
-<td colspan="2"><button onclick="clearscreen()">Clear</button></td>
-<td><button onlick="d1()">÷</button></td>
+<td><button class="nonop" onclick="on()">ON</button></td>
+<td><button class="nonop" onclick="off()">OFF</button></td>
+<td ><button class="nonop" onclick="clearscreen()">Clear</button></td>
+<td><button class="op" onclick="d1()">÷</button></td>
 </tr>
 <tr>
 <td><button onclick="seven()">7</button></td>
 <td><button onclick="eight()">8</button></td>
 <td><button onclick="nine()">9</button></td>
-<td><button onclick="x1()">x</button></td>
+<td><button class="op" onclick="x1()">x</button></td>
 </tr>
 <tr>
 <td><button onclick="four()">4</button></td>
 <td><button onclick="five()">5</button></td>
 <td><button onclick="six()">6</button></td>
-<td><button>-</button></td>
+<td><button class="op" onclick="s1()">-</button></td>
 </tr>
 <tr>
 <td><button onclick="one()">1</button></td>
 <td><button onclick="two()">2</button></td>
 <td><button onclick="three()">3</button></td>
-<td><button>+</button></td>
+<td><button class="op" onclick="a1()">+</button></td>
 </tr>
 <tr>
-<td><button></button></td>
+<td><button onclick="smile()">:)</button></td>
 <td><button onclick="zero()">0</button></td>
-<td><button></button></td>
-<td><button onclick="equals()">=</button></td>
+<td><button onclick="decimal()">.</button></td>
+<td><button class="op" onclick="equals()">=</button></td>
 </tr>
 </table>
 </center>
@@ -92,6 +119,12 @@ document.getElementById("screen").innerHTML=document.getElementById("screen").in
 function zero() {
 document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+0
 }
+function decimal() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'.'
+}
+function smile() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+':)'
+}
 function on() {
 document.getElementById("window").style.backgroundColor="black"
 }
@@ -103,37 +136,24 @@ document.getElementById("screen").innerHTML="";
 }
 function x1() {
 a=document.getElementById("screen").innerHTML;
-document.getElementById("screen").innerHTML= a + " x ";
+document.getElementById("screen").innerHTML= a + " * ";
 }
 function d1() {
 a=document.getElementById("screen").innerHTML;
 document.getElementById("screen").innerHTML= a + " / ";
 }
+function s1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " - ";
+}
+function a1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " + ";
+}
 function equals() {
-b=document.getElementById("screen").innerHTML;
-if (document.getElementById("screen").innerHTML.includes("x")){
-document.getElementById("screen").innerHTML= multiply(a,b);
-}}
-//if "/" in getElementById("screen").innerHTML{
-//getElementById("screen").innerHTML= divide(a,b)
-//}
-//if "-" in getElementById("screen").innerHTML{
-//getElementById("screen").innerHTML= subtract(a,b)
-//}
-//if "+" in getElementById("screen").innerHTML{
-//getElementById("screen").innerHTML= add(a,b)
-//}
-function multiply(a,b) {
-  return a * b;
-}
-function divide(a,b) {
-return a / b;
-}
-function subtract(a,b) {
-return a - b;
-}
-function add(a,b) {
-return a + b;
+var b=document.getElementById("screen").innerHTML;
+answer = eval(b);
+document.getElementById("screen").innerHTML= answer;
 }
 </script>
 
