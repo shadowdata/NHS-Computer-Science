@@ -1,12 +1,6 @@
 <html>
 <head>
 <style>
-.on {
-background-color:"yellow"
-}
-.off {
-background-color:"grey"
-}
 button {
 float:left;
 border:1px;
@@ -20,37 +14,56 @@ padding:25px 30px;
 <body>
 <table>
 <tr>
-<td><button id="1" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="2" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="3" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="4" class="off" onclick="off(this.id)">☼</button></td>
+<td><button id="1" onClick="off(this.id)">☼</button></td>
+<td><button id="2" onClick="off(this.id)">☼</button></td>
+<td><button id="3" onClick="off(this.id)">☼</button></td>
+<td><button id="4" onClick="off(this.id)">☼</button></td>
 </tr>
 <tr>
-<td><button id="5" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="6" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="7" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="8" class="off" onclick="off(this.id)">☼</button></td>
+<td><button id="5" onClick="off(this.id)">☼</button></td>
+<td><button id="6" onClick="off(this.id)">☼</button></td>
+<td><button id="7" onClick="off(this.id)">☼</button></td>
+<td><button id="8" onClick="off(this.id)">☼</button></td>
 </tr>
 <tr>
-<td><button id="9" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="10" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="11" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="12" class="off" onclick="off(this.id)">☼</button></td>
+<td><button id="9" onClick="off(this.id)">☼</button></td>
+<td><button id="10" onClick="off(this.id)">☼</button></td>
+<td><button id="11" onClick="off(this.id)">☼</button></td>
+<td><button id="12" onClick="off(this.id)">☼</button></td>
 </tr>
 <tr>
-<td><button id="13" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="14" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="15" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="16" class="off" onclick="off(this.id)">☼</button></td>
+<td><button id="13" onClick="off(this.id)">☼</button></td>
+<td><button id="14" onClick="off(this.id)">☼</button></td>
+<td><button id="15" onClick="off(this.id)">☼</button></td>
+<td><button id="16" onClick="off(this.id)">☼</button></td>
 </tr>
 </table>
 <script>
 function off(clicked_id){
-var style = document.getElementById(clicked_id);
-alert(clicked_id)
-//style.classList.remove("off");
-//style.classList.add("on");
+  var butid = document.getElementById(clicked_id);
+  if (butid.style.backgroundColor=='gray'){
+    butid.style.backgroundColor='yellow';
+  }
+  else if (butid.style.backgroundColor=='yellow'){
+  	butid.style.backgroundColor='gray';
+  }
 }
+document.getElementById("1").style.backgroundColor = 'gray';
+document.getElementById("2").style.backgroundColor = 'gray';
+document.getElementById("3").style.backgroundColor = 'gray';
+document.getElementById("4").style.backgroundColor = 'gray';
+document.getElementById("5").style.backgroundColor = 'gray';
+document.getElementById("6").style.backgroundColor = 'gray';
+document.getElementById("7").style.backgroundColor = 'gray';
+document.getElementById("8").style.backgroundColor = 'gray';
+document.getElementById("9").style.backgroundColor = 'gray';
+document.getElementById("10").style.backgroundColor = 'gray';
+document.getElementById("11").style.backgroundColor = 'gray';
+document.getElementById("12").style.backgroundColor = 'gray';
+document.getElementById("13").style.backgroundColor = 'gray';
+document.getElementById("14").style.backgroundColor = 'gray';
+document.getElementById("15").style.backgroundColor = 'gray';
+document.getElementById("16").style.backgroundColor = 'gray';
 </script>
 </body>
 </html>
