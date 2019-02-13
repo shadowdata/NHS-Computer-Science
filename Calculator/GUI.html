@@ -1,61 +1,170 @@
 <html>
 <head>
+//Establishing the different stylistic appearances of the elements of my calculator. 
 <style>
-.on {
-background-color:"yellow"
-}
-.off {
-background-color:"grey"
+p {
+color: #aaffe4;
+padding: 30px;
+align: right;
 }
 button {
-float:left;
-border:1px;
-display:inline-block;
-background-color:grey;
-font-size:15px;
-padding:25px 30px;
+padding: 15px;
+background-color: #aaffe4;
+border-radius:4px;
+color: black;
+border: 2px solid black;
+text-align:center;
+margin: 4px 1px;
+display: inline-block;
+}
+td {
+text-align:center;
+}
+.nonop {
+background-color: #98e2cb;
+}
+.op {
+background-color: #82ffd8;
+}
+.body {
+border-radius: 4px;
+border: 2px solid black;
+}
+.screen {
+border-radius: 4px;
+border: 2px solid black;
+}
+.center {
+margin: auto;
 }
 </style>
 </head>
 <body>
-<table>
+//Body of the calculator.
+<div class="body" style="width:300px;height:420px;background-color:lightgrey;padding:25px">
+
+//Screen on calculator.
+<center>
+<div class='screen' id="window" style="background-color:grey;width:300px;height:75px;padding:0px">
+<center>
+<p id="screen" style="font-size:20px;"></p>
+</center>
+</div>
+</center>
+
+<br>
+
+//These are all of the buttons of the calculator, arranged in a table. 
+<center>
+<table id="numpad" align="center" width="275px">
 <tr>
-<td><button id="1" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="2" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="3" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="4" class="off" onclick="off(this.id)">☼</button></td>
+<td><button class="nonop" onclick="on()">ON</button></td>
+<td><button class="nonop" onclick="off()">OFF</button></td>
+<td ><button class="nonop" onclick="clearscreen()">Clear</button></td>
+<td><button class="op" onclick="d1()">÷</button></td>
 </tr>
 <tr>
-<td><button id="5" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="6" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="7" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="8" class="off" onclick="off(this.id)">☼</button></td>
+<td><button onclick="seven()">7</button></td>
+<td><button onclick="eight()">8</button></td>
+<td><button onclick="nine()">9</button></td>
+<td><button class="op" onclick="x1()">x</button></td>
 </tr>
 <tr>
-<td><button id="9" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="10" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="11" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="12" class="off" onclick="off(this.id)">☼</button></td>
+<td><button onclick="four()">4</button></td>
+<td><button onclick="five()">5</button></td>
+<td><button onclick="six()">6</button></td>
+<td><button class="op" onclick="s1()">-</button></td>
 </tr>
 <tr>
-<td><button id="13" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="14" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="15" class="off" onclick="off(this.id)">☼</button></td>
-<td><button id="16" class="off" onclick="off(this.id)">☼</button></td>
+<td><button onclick="one()">1</button></td>
+<td><button onclick="two()">2</button></td>
+<td><button onclick="three()">3</button></td>
+<td><button class="op" onclick="a1()">+</button></td>
+</tr>
+<tr>
+<td><button onclick="smile()">:)</button></td>
+<td><button onclick="zero()">0</button></td>
+<td><button onclick="decimal()">.</button></td>
+<td><button class="op" onclick="equals()">=</button></td>
 </tr>
 </table>
+</center>
+
+</div>
+
+//This is the operational javascript code that corresponds to the buttons. 
 <script>
-function off(clicked_id){
-var style = document.getElementById(clicked_id);
-alert(clicked_id)
-//style.classList.remove("off");
-//style.classList.add("on");
+var a = 0 ;
+var b = 0;
+
+function one() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+1
 }
-//function click(clicked_id){
-//if document.getElementById(clicked_id).background-color = "grey"{
-//document.getElementById(clicked_id).className="on"
-//}
-//}
+function two() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+2
+}
+function three() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+3
+}
+function four() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+4
+}
+function five() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+5
+}
+function six() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+6
+}
+function seven() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+7
+}
+function eight() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+8
+}
+function nine() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+9
+}
+function zero() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+0
+}
+function decimal() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+'.'
+}
+function smile() {
+document.getElementById("screen").innerHTML=document.getElementById("screen").innerHTML+':)'
+}
+function on() {
+document.getElementById("window").style.backgroundColor="black"
+}
+function off() {
+document.getElementById("window").style.backgroundColor="grey"
+}
+function clearscreen() { 
+document.getElementById("screen").innerHTML="";
+}
+function x1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " * ";
+}
+function d1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " / ";
+}
+function s1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " - ";
+}
+function a1() {
+a=document.getElementById("screen").innerHTML;
+document.getElementById("screen").innerHTML= a + " + ";
+}
+function equals() {
+var b=document.getElementById("screen").innerHTML;
+answer = eval(b);
+document.getElementById("screen").innerHTML= answer;
+}
 </script>
+
 </body>
+
 </html>
