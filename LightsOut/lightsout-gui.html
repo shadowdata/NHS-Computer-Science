@@ -4,7 +4,220 @@
 button {
 float:left;
 border:1px;
+display:inline-block;<html>
+<head>
+<style>
+.gamebutton {
+float:left;
+border:1px;
 display:inline-block;
+font-size:50px;
+text-align:center;
+padding:25px 30px;
+width: 100px;
+height: 100px;
+}
+.levels { 
+height: 30px;
+width: 55px; 
+background-color:black;
+font-size:10px;
+color:white;
+margin:auto;
+padding: 0px; 
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td><button id="l1" class="levels" onClick="lev1()">Level 1</button></td>
+<td><button id="l2" class="levels" onClick="lev2()">Level 2</button></td>
+<td><button id="l3" class="levels" onClick="lev3()">Level 3</button></td>
+<td><button id="l4" class="levels" onClick="lev4()">Level 4</button></td>
+<td><button id="l5" class="levels" onClick="lev5()">Level 5</button></td>
+<td><button id="l6" class="levels" onClick="lev6()">Level 6</button></td>
+<td><button id="l7" class="levels" onClick="lev7()">Level 7</button></td>
+</tr>
+<table>
+<tr>
+<td><button id="1" class="gamebutton" onClick="b1()">☀</button></td>
+<td><button id="2" class="gamebutton" onClick="b2()">☀</button></td>
+<td><button id="3" class="gamebutton" onClick="b3()">☀</button></td>
+<td><button id="4" class="gamebutton" onClick="b4()">☀</button></td>
+</tr>
+<tr>
+<td><button id="5" class="gamebutton" onClick="b5()">☀</button></td>
+<td><button id="6" class="gamebutton" onClick="b6()">☀</button></td>
+<td><button id="7" class="gamebutton" onClick="b7()">☀</button></td>
+<td><button id="8" class="gamebutton" onClick="b8()">☀</button></td>
+</tr>
+<tr>
+<td><button id="9" class="gamebutton" onClick="b9()">☀</button></td>
+<td><button id="10" class="gamebutton" onClick="b10()">☀</button></td>
+<td><button id="11" class="gamebutton" onClick="b11()">☀</button></td>
+<td><button id="12" class="gamebutton" onClick="b12()">☀</button></td>
+</tr>
+<tr>
+<td><button id="13" class="gamebutton" onClick="b13()">☀</button></td>
+<td><button id="14" class="gamebutton" onClick="b14()">☀</button></td>
+<td><button id="15" class="gamebutton" onClick="b15()">☀</button></td>
+<td><button id="16" class="gamebutton" onClick="b16()">☀</button></td>
+</tr>
+</table>
+<script> 
+function toggle(n){
+if (document.getElementById(n).style.backgroundColor=='gray'){
+		document.getElementById(n).style.backgroundColor='yellow';
+        document.getElementById(n).innerHTML="☼"}
+	else if (document.getElementById(n).style.backgroundColor=='yellow'){
+		document.getElementById(n).style.backgroundColor='gray';
+        document.getElementById(n).innerHTML="☀"}
+}
+function b1() {
+    toggle("1");
+    toggle("2");
+    toggle("5");
+}
+function b2() {
+    toggle("2");
+    toggle("1");
+    toggle("3");
+    toggle("6");
+}
+function b3() {
+    toggle("3");
+    toggle("2");
+    toggle("4");
+    toggle("7");
+}
+function b4() {
+    toggle("4");
+    toggle("3");
+    toggle("8");
+}
+function b5() {
+    toggle("5");
+    toggle("1");
+    toggle("6");
+    toggle("9");
+}
+function b6() {
+    toggle("6");
+    toggle("2");
+    toggle("7");
+    toggle("10");
+    toggle("5");
+}
+function b7() {
+    toggle("7");
+    toggle("3");
+    toggle("8");
+    toggle("11");
+    toggle("6");
+}
+function b8() {
+    toggle("8");
+    toggle("4");
+    toggle("7");
+    toggle("12");
+}
+function b9() {
+    toggle("9");
+    toggle("5");
+    toggle("10");
+    toggle("13");
+}
+function b10() {
+    toggle("10");
+    toggle("6");
+    toggle("11");
+    toggle("14");
+    toggle("9");
+}
+function b11() {
+    toggle("11");
+    toggle("7");
+    toggle("12");
+    toggle("15");
+    toggle("10");
+}
+function b12() {
+    toggle("12");
+    toggle("8");
+    toggle("16");
+    toggle("11");
+}
+function b13() {
+    toggle("13");
+    toggle("9");
+    toggle("14");
+}
+function b14() {
+    toggle("14");
+    toggle("10");
+    toggle("15");
+    toggle("13");
+}
+function b15() {
+    toggle("15");
+    toggle("11");
+    toggle("16");
+    toggle("14");
+}
+function b16() {
+    toggle("16");
+    toggle("12");
+    toggle("15");
+}
+document.getElementById("1").style.backgroundColor = 'gray';
+document.getElementById("2").style.backgroundColor = 'gray';
+document.getElementById("3").style.backgroundColor = 'gray';
+document.getElementById("4").style.backgroundColor = 'gray';
+document.getElementById("5").style.backgroundColor = 'gray';
+document.getElementById("6").style.backgroundColor = 'gray';
+document.getElementById("7").style.backgroundColor = 'gray';
+document.getElementById("8").style.backgroundColor = 'gray';
+document.getElementById("9").style.backgroundColor = 'gray';
+document.getElementById("10").style.backgroundColor = 'gray';
+document.getElementById("11").style.backgroundColor = 'gray';
+document.getElementById("12").style.backgroundColor = 'gray';
+document.getElementById("13").style.backgroundColor = 'gray';
+document.getElementById("14").style.backgroundColor = 'gray';
+document.getElementById("15").style.backgroundColor = 'gray';
+document.getElementById("16").style.backgroundColor = 'gray';
+function lev1() {
+document.getElementById("1").style.backgroundColor= 'yellow';
+document.getElementById("2").style.backgroundColor= 'yellow';
+document.getElementById("3").style.backgroundColor= 'yellow';
+document.getElementById("4").style.backgroundColor= 'yellow';
+document.getElementById("5").style.backgroundColor= 'yellow';
+document.getElementById("8").style.backgroundColor= 'yellow';
+document.getElementById("9").style.backgroundColor= 'yellow';
+document.getElementById("12").style.backgroundColor= 'yellow';
+document.getElementById("13").style.backgroundColor= 'yellow';
+document.getElementById("14").style.backgroundColor= 'yellow';
+document.getElementById("15").style.backgroundColor= 'yellow';
+document.getElementById("16").style.backgroundColor= 'yellow';
+}
+function lev2() {
+document.getElementById("1").style.backgroundColor= 'yellow';
+document.getElementById("2").style.backgroundColor= 'yellow';
+document.getElementById("3").style.backgroundColor= 'yellow';
+document.getElementById("4").style.backgroundColor= 'yellow';
+document.getElementById("5").style.backgroundColor= 'yellow';
+document.getElementById("8").style.backgroundColor= 'yellow';
+document.getElementById("9").style.backgroundColor= 'yellow';
+document.getElementById("12").style.backgroundColor= 'yellow';
+document.getElementById("13").style.backgroundColor= 'yellow';
+document.getElementById("14").style.backgroundColor= 'yellow';
+document.getElementById("15").style.backgroundColor= 'yellow';
+document.getElementById("16").style.backgroundColor= 'yellow';
+}
+</script>
+</body>
+</html>
+
 background-color:grey;
 font-size:50px;
 text-align:center;
