@@ -74,6 +74,14 @@ if (document.getElementById(n).style.backgroundColor=='gray'){
 		document.getElementById(n).style.backgroundColor='gray';
         document.getElementById(n).innerHTML="☀"}
 }
+function preseton(n){
+document.getElementById(n).style.backgroundColor='yellow';
+document.getElementById(n).innerHTML="☼";
+}
+function presetoff(n){
+document.getElementById(n).style.backgroundColor='gray';
+document.getElementById(n).innerHTML="☀";
+}
 function b1() {
     toggle("1");
     toggle("2");
@@ -187,32 +195,25 @@ document.getElementById("14").style.backgroundColor = 'gray';
 document.getElementById("15").style.backgroundColor = 'gray';
 document.getElementById("16").style.backgroundColor = 'gray';
 function lev1() {
-document.getElementById("1").style.backgroundColor= 'yellow';
-document.getElementById("2").style.backgroundColor= 'yellow';
-document.getElementById("3").style.backgroundColor= 'yellow';
-document.getElementById("4").style.backgroundColor= 'yellow';
-document.getElementById("5").style.backgroundColor= 'yellow';
-document.getElementById("8").style.backgroundColor= 'yellow';
-document.getElementById("9").style.backgroundColor= 'yellow';
-document.getElementById("12").style.backgroundColor= 'yellow';
-document.getElementById("13").style.backgroundColor= 'yellow';
-document.getElementById("14").style.backgroundColor= 'yellow';
-document.getElementById("15").style.backgroundColor= 'yellow';
-document.getElementById("16").style.backgroundColor= 'yellow';
+	preseton("1");
+	preseton("2");
+	preseton("3");
+	preseton("4");
+	preseton("5");
+	preseton("8");
+	preseton("9");
+	preseton("12");
+	preseton("13");
+	preseton("14");
+	preseton("15");
+	preseton("16");
+	 presetoff("6");
+	 presetoff("7");
+	 presetoff("10");
+	 presetoff("11");
 }
 function lev2() {
-document.getElementById("1").style.backgroundColor= 'yellow';
-document.getElementById("2").style.backgroundColor= 'yellow';
-document.getElementById("3").style.backgroundColor= 'yellow';
-document.getElementById("4").style.backgroundColor= 'yellow';
-document.getElementById("5").style.backgroundColor= 'yellow';
-document.getElementById("8").style.backgroundColor= 'yellow';
-document.getElementById("9").style.backgroundColor= 'yellow';
-document.getElementById("12").style.backgroundColor= 'yellow';
-document.getElementById("13").style.backgroundColor= 'yellow';
-document.getElementById("14").style.backgroundColor= 'yellow';
-document.getElementById("15").style.backgroundColor= 'yellow';
-document.getElementById("16").style.backgroundColor= 'yellow';
+
 }
 </script>
 </body>
