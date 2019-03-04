@@ -1,1 +1,72 @@
 
+<html>
+<head>
+<style>
+table, td {
+border: 3px solid black;
+}
+table {
+background-color:black;
+}
+td {
+width: 20px;
+height: 20px;
+text-align: center;
+padding:0px;
+font-size: 5px;
+}
+button {
+float:left;
+border:1px;
+display:inline-block;
+font-size:25px;
+text-align:center;
+width: 50px;
+height: 50px;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td><button id="1" onClick=b1()></button></td>
+<td><button id="2"> </button></td>
+<td><button id="3"> </button></td>
+</tr>
+<tr>
+<td><button id="4"> </button></td>
+<td><button id="5"> </button></td>
+<td><button id="6"> </button></td>
+</tr>
+<tr>
+<td><button id="7"> </button></td>
+<td><button id="8"> </button></td>
+<td><button id="9"> </button></td>
+</tr>
+<script>
+function turn(n){
+if (document.getElementById(n).innerHTML==' '){
+		document.getElementById(n).innerHTML='x';
+        }
+	else if (document.getElementById(n)innerHTML=='x'){
+		document.getElementById(n).innerHTML='o';
+        }
+    //else if (document.getElementById(n)innerHTML=='o'){
+    	//document.getElementById(n).innerHTML=' ';
+}
+//function setblank(n) {
+//document.getElementById(n).innerHTML=' ';
+//}
+//function setx(n) {
+//document.getElementById(n).innerHTML=' ';
+//}
+//function seto(n) {
+//document.getElementById(n).innerHTML=' ';
+//}
+function b1() {
+turn("1");
+}
+document.getElementById("1").innerHTML=' ';
+</script>
+</body>
+</html>
