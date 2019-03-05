@@ -6,7 +6,7 @@ table, td {
 border: 3px solid black;
 }
 table {
-background-color:black;
+background-color:turquoise;
 }
 td {
 width: 20px;
@@ -16,7 +16,7 @@ padding:0px;
 font-size: 5px;
 }
 button {
-float:left;
+float:middle;
 border:1px;
 display:inline-block;
 font-size:25px;
@@ -24,49 +24,89 @@ text-align:center;
 width: 50px;
 height: 50px;
 }
+.bhead {
+float:left;
+border:1px;
+display:inline-block;
+font-size:15px;
+text-align:center;
+width: 77px;
+height: 25px;
+}
 </style>
 </head>
 <body>
+<center>
+<table>
+<tr>
+<td><button class=bhead>2 Player</button></td>
+<td><button class=bhead>Computer</button></td>
+</tr>
+</table>
+</center>
+<br>
+<center>
 <table>
 <tr>
 <td><button id="1" onClick=b1()></button></td>
-<td><button id="2"> </button></td>
-<td><button id="3"> </button></td>
+<td><button id="2" onClick=b2()> </button></td>
+<td><button id="3" onClick=b3()> </button></td>
 </tr>
 <tr>
-<td><button id="4"> </button></td>
-<td><button id="5"> </button></td>
-<td><button id="6"> </button></td>
+<td><button id="4" onClick=b4()> </button></td>
+<td><button id="5" onClick=b5()> </button></td>
+<td><button id="6" onClick=b6()> </button></td>
 </tr>
 <tr>
-<td><button id="7"> </button></td>
-<td><button id="8"> </button></td>
-<td><button id="9"> </button></td>
+<td><button id="7" onClick=b7()> </button></td>
+<td><button id="8" onClick=b8()> </button></td>
+<td><button id="9" onClick=b9()> </button></td>
 </tr>
+</table>
+</center>
 <script>
+input = "X"
 function turn(n){
-if (document.getElementById(n).innerHTML==' '){
-		document.getElementById(n).innerHTML='x';
-        }
-	else if (document.getElementById(n)innerHTML=='x'){
-		document.getElementById(n).innerHTML='o';
-        }
-    //else if (document.getElementById(n)innerHTML=='o'){
-    	//document.getElementById(n).innerHTML=' ';
+if (input=="X"){
+	document.getElementById(n).innerHTML=input;
+    input = "O";
+    }
+else if (input=="O"){
+	document.getElementById(n).innerHTML=input;
+    input="X"
+    }
 }
-//function setblank(n) {
-//document.getElementById(n).innerHTML=' ';
-//}
-//function setx(n) {
-//document.getElementById(n).innerHTML=' ';
-//}
-//function seto(n) {
-//document.getElementById(n).innerHTML=' ';
-//}
 function b1() {
 turn("1");
 }
-document.getElementById("1").innerHTML=' ';
+function b2() {
+turn("2");
+}
+function b3() {
+turn("3");
+}
+function b4() {
+turn("4");
+}
+function b5() {
+turn("5");
+}
+function b6() {
+turn("6");
+}
+function b7() {
+turn("7");
+}
+function b8() {
+turn("8");
+}
+function b9() {
+turn("9");
+}
+//as of now, this function below just prints "wins" because all elements start out with the same inner HTML. 1) maybe make it so all of the elements have different inner HTMLs somehow. 2) find a way to alert the inner HTML of an element. 
+//if //(document.getElementById("1").innerHTML==document.getElementById(//"2").innerHTML==document.getElementById("3").innerHTML) {
+//alert (document.getElementById("1").innerHTML +"wins!")
+//}
 </script>
 </body>
 </html>
