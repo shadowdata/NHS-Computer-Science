@@ -40,7 +40,7 @@ height: 25px;
 <table>
 <tr>
 <td><button class=bhead>2 Player</button></td>
-<td><button class=bhead>Computer</button></td>
+<td><button class=bhead onClick=computerturn()>Computer</button></td>
 </tr>
 </table>
 </center>
@@ -49,18 +49,18 @@ height: 25px;
 <table>
 <tr>
 <td><button id="1" onClick=b1()></button></td>
-<td><button id="2" onClick=b2()> </button></td>
-<td><button id="3" onClick=b3()> </button></td>
+<td><button id="2" onClick=b2()></button></td>
+<td><button id="3" onClick=b3()></button></td>
 </tr>
 <tr>
-<td><button id="4" onClick=b4()> </button></td>
-<td><button id="5" onClick=b5()> </button></td>
-<td><button id="6" onClick=b6()> </button></td>
+<td><button id="4" onClick=b4()></button></td>
+<td><button id="5" onClick=b5()></button></td>
+<td><button id="6" onClick=b6()></button></td>
 </tr>
 <tr>
-<td><button id="7" onClick=b7()> </button></td>
-<td><button id="8" onClick=b8()> </button></td>
-<td><button id="9" onClick=b9()> </button></td>
+<td><button id="7" onClick=b7()></button></td>
+<td><button id="8" onClick=b8()></button></td>
+<td><button id="9" onClick=b9()></button></td>
 </tr>
 </table>
 </center>
@@ -74,6 +74,44 @@ if (input=="X"){
 else if (input=="O"){
 	document.getElementById(n).innerHTML=input;
     input="X"
+    }
+}
+function computerturn(){
+if (document.getElementById("1").innerHTML==''){
+	document.getElementById("1").innerHTML=input;
+    input="X";
+	}
+else if (document.getElementById("2").innerHTML==''){
+    document.getElementById("2").innerHTML=input;
+    input="X";
+    }
+else if (document.getElementById("3").innerHTML==''){
+    document.getElementById("3").innerHTML=input;
+    input="X";
+    }
+else if (document.getElementById("4").innerHTML==''){
+    document.getElementById("4").innerHTML=input;
+    input="X";
+    }
+else if (document.getElementById("5").innerHTML==''){
+    document.getElementById("5").innerHTML=input;
+    input="X";
+    }
+else if (document.getElementById("6").innerHTML==''){
+    document.getElementById("6").innerHTML=input;
+    input="X";
+    }
+else if (document.getElementById("7").innerHTML==''){
+    document.getElementById("7").innerHTML=input;
+    input="X";
+    }
+else if (document.getElementById("8").innerHTML==''){
+    document.getElementById("8").innerHTML=input;
+    input="X";
+    }
+else if (document.getElementById("9").innerHTML==''){
+    document.getElementById("9").innerHTML=input;
+    input="X";
     }
 }
 function b1() {
