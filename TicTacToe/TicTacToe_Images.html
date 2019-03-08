@@ -1,1 +1,153 @@
 
+<html>
+<head>
+<style>
+table, td {
+border: 3px solid black;
+}
+table {
+background-color:turquoise;
+}
+td {
+width: 20px;
+height: 20px;
+text-align: center;
+padding:0px;
+font-size: 5px;
+}
+button {
+float:middle;
+border:1px;
+display:inline-block;
+font-size:25px;
+text-align:center;
+width: 50px;
+height: 50px;
+}
+.bhead {
+float:left;
+border:1px;
+display:inline-block;
+font-size:15px;
+text-align:center;
+width: 77px;
+height: 25px;
+}
+</style>
+</head>
+<body>
+<center>
+<table>
+<tr>
+<td><button class=bhead>2 Player</button></td>
+<td><button class=bhead onClick=computerturn()>Computer</button></td>
+</tr>
+</table>
+</center>
+<br>
+<center>
+<table>
+<tr>
+<td><button id="1" onClick=b1()></button></td>
+<td><button id="2" onClick=b2()></button></td>
+<td><button id="3" onClick=b3()></button></td>
+</tr>
+<tr>
+<td><button id="4" onClick=b4()></button></td>
+<td><button id="5" onClick=b5()></button></td>
+<td><button id="6" onClick=b6()></button></td>
+</tr>
+<tr>
+<td><button id="7" onClick=b7()></button></td>
+<td><button id="8" onClick=b8()></button></td>
+<td><button id="9" onClick=b9()></button></td>
+</tr>
+</table>
+</center>
+<script>
+input = "url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')"
+function turn(n){
+document.getElementById(n).style.backgroundSize="50px 50px"
+if (input=="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')"){
+	document.getElementById(n).style.backgroundImage=input;
+    input = "url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg')";
+    }
+else if (input=="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg')"){
+	document.getElementById(n).style.backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')"
+    }
+}
+function computerturn(){
+if (document.getElementById("1").innerHTML==''){
+	document.getElementById("1").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+	}
+else if (document.getElementById("2").innerHTML==''){
+    document.getElementById("2").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+    }
+else if (document.getElementById("3").innerHTML==''){
+    document.getElementById("3").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+    }
+else if (document.getElementById("4").innerHTML==''){
+    document.getElementById("4").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+    }
+else if (document.getElementById("5").innerHTML==''){
+    document.getElementById("5").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+    }
+else if (document.getElementById("6").innerHTML==''){
+    document.getElementById("6").backgroundImage=input;
+    input="X";
+    }
+else if (document.getElementById("7").innerHTML==''){
+    document.getElementById("7").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+    }
+else if (document.getElementById("8").innerHTML==''){
+    document.getElementById("8").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+    }
+else if (document.getElementById("9").innerHTML==''){
+    document.getElementById("9").backgroundImage=input;
+    input="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')";
+    }
+}
+function b1() {
+turn("1");
+}
+function b2() {
+turn("2");
+}
+function b3() {
+turn("3");
+}
+function b4() {
+turn("4");
+}
+function b5() {
+turn("5");
+}
+function b6() {
+turn("6");
+}
+function b7() {
+turn("7");
+}
+function b8() {
+turn("8");
+}
+function b9() {
+turn("9");
+}
+//as of now, this function below just prints "wins" because all elements start out with the same inner HTML. 1) maybe make it so all of the elements have different inner HTMLs somehow. 2) find a way to alert the inner HTML of an element. 
+//if //(document.getElementById("1").innerHTML==document.getElementById(//"2").innerHTML==document.getElementById("3").innerHTML) {
+//alert (document.getElementById("1").innerHTML +"wins!")
+//}
+//Anthony_Img="https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg"
+//Jed_Img="https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg"
+</script>
+</body>
+</html>
