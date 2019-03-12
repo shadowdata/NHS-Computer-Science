@@ -24,26 +24,9 @@ text-align:center;
 width: 50px;
 height: 50px;
 }
-.bhead {
-float:left;
-border:1px;
-display:inline-block;
-font-size:15px;
-text-align:center;
-width: 77px;
-height: 25px;
-}
 </style>
 </head>
 <body>
-<center>
-<table>
-<tr>
-<td><button class=bhead>2 Player</button></td>
-<td><button class=bhead onClick=computerturn()>Computer</button></td>
-</tr>
-</table>
-</center>
 <br>
 <center>
 <table>
@@ -90,105 +73,55 @@ function checkWinner(){
   
 if (s1 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s1 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s1 == s2 && s2 == s3) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b5").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b6").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
     alert('winner'); 
   }
 }
 if (s4 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s4 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s4 == s5 && s5 == s6) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b5").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b6").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
     alert('winner'); 
   }
 }
 if (s7 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s7 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s7 == s8 && s8 == s9) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b5").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b6").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
     alert('winner'); 
   }
 }
 if (s1 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s1 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s1 == s4 && s4 == s7) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b5").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b6").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
     alert('winner'); 
   }
 }
 if (s2 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s2 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s2 == s5 && s5 == s8) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b5").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b6").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
     alert('winner'); 
   }
 }
 if (s3 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s3 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s3 == s6 && s6 == s9) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b5").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b6").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
     alert('winner'); 
   }
 }
 if (s1 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s1 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s1 == s5 && s5 == s9) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b5").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b6").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-  document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
     alert('winner'); 
   }
 }
 if (s3 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg")' || s3 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5906.jpg")') { 
   if (s3 == s5 && s5 == s7) {
-  document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
+    buckey();
+    alert('winner'); 
+  }
+}
+}
+function buckey(){
+document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b4").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
@@ -197,9 +130,6 @@ if (s3 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901
   document.getElementById("b7").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
-    alert('winner'); 
-  }
-}
 }
 //i know that i should use a function when setting all of the background elements to buckey, but it was just for fun so i am not worried about it. 
 function b1() {
