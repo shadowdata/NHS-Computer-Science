@@ -50,6 +50,7 @@ height: 50px;
 <script>
 input = "url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')"
 function turn(n){
+//replaces innerhtml of the buttons to be jed and anthony's photos. 
 document.getElementById(n).style.backgroundSize="50px 50px"
 if (input=="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901.jpg')"){
 	document.getElementById(n).style.backgroundImage=input;
@@ -61,6 +62,7 @@ else if (input=="url('https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/
     }
 }
 function checkWinner(){
+//checking to see if the current board has any of these listed conditions, if so, buckey will take over the board and it will print 'winner'
   s1 = document.getElementById("b1").style.backgroundImage;
   s2 = document.getElementById("b2").style.backgroundImage;
   s3 = document.getElementById("b3").style.backgroundImage;
@@ -121,6 +123,7 @@ if (s3 == 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/3901
 }
 }
 function buckey(){
+//setting the whole board to dr buckey's face
 document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b2").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b3").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
@@ -131,7 +134,7 @@ document.getElementById("b1").style.backgroundImage = 'url("https://www.npsk.org
   document.getElementById("b8").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
   document.getElementById("b9").style.backgroundImage = 'url("https://www.npsk.org/cms/lib/MA01907678/Centricity/Domain/4/5088.jpg")';
 }
-//i know that i should use a function when setting all of the background elements to buckey, but it was just for fun so i am not worried about it. 
+//these functions combine all defined functions thus far. every time someone makes a move, the function will check to see if there is a winning condition. 
 function b1() {
 turn("b1");
 checkWinner();
