@@ -1,1 +1,37 @@
+<html>
+<head>
+<style>
 
+</style>
+</head>
+<body>
+<button id='funbutton' onClick="functioninput()">Function</button>
+From
+<button id='inter1' onClick="interval1()">X</button>
+To
+<button id='inter2' onClick="interval2()">X</button>
+<br>
+<button onClick="test()">test</button>
+<script>
+var userfun, x1, x2;
+function functioninput() {
+	userfun = prompt("Enter your function here.");
+    document.getElementById('funbutton').innerHTML = userfun; 
+}
+function interval1() {
+ 	x1 = prompt("Enter the first x value on your interval.");
+    document.getElementById('inter1').innerHTML = x1;
+}
+function interval2() {
+	x2 = prompt("Enter the second x value on your interval.");
+    document.getElementById('inter2').innerHTML = x2;
+}
+function riemmansum() {
+var step = (x2-x1)/1000
+}
+function test() {
+alert(step)
+}
+</script>
+</body>
+</html> 
